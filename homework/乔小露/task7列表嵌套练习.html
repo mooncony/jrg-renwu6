@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>列表嵌套练习</title>
+  <style>
+    *{padding:0;margin:0 auto;}
+    .address{
+      padding:20px;
+      width:80%;
+      min-width:930px;
+      background:#E7EFF4;
+      color:#518193;
+      font-size:18px;
+    }
+    .list{
+      display:block;
+      width:880px;
+      margin-bottom:15px;
+      padding:20px 20px 0 20px;
+      border:1px #c5d2db solid;
+      border-radius:6px;
+      background:#fff;
+      box-shadow:0 1px 2px rgba(31,35,37,0.1)
+    }
+    .line{
+      margin:8px 0;
+      border-top:1px #e3e3e3 solid;
+    }
+    .part1>dd{
+      color:#518193;
+      padding:16px 0 16px 0;
+      margin:0px 18px 0 14px;
+      width:260px;
+      float:left;
+    }
+    .part2>li{
+      list-style:none;
+      padding:0 0 26px 0;
+      margin:0px 10px 0 14px;
+      width:880px;
+    }
+    .tit1{
+      font-size:18px;
+      color:#00ad35;
+    }
+    .txt1{
+      font-size:12px;
+      color:#518193;
+    }
+    .part2-01>li{
+      width:260px;
+      float:left;
+      list-style:none;
+      padding:10px 20px 10px 10px;
+    }
+    .tit{
+      display:block;
+      float:left;
+      width:160px;
+      line-height:140px;
+      padding-left:20px;
+    }
+    
+    :after{
+      content:'';
+      display:block;
+      clear:both;
+    }
+  </style>
+</head>
+<body>
+      <ul class="address">
+        <li class="list">常用
+          <div class="line"></div>
+            <dl class="part1">
+              <dd>
+                <span class="tit1">Behance</span> 
+                <span class="txt1">全球设计师的作品展示平台</span>
+              </dd>
+              <dd>
+                <span class="tit1">Dribbble</span> 
+                <span class="txt1">界面设计推荐必去网站</span>
+              </dd>
+              <dd>
+                <span class="tit1">CSSWINNER</span> 
+                <span class="txt1">国外优秀CSS网站画廊</span>
+              </dd>
+              <dd>
+                <span class="tit1">MUUUUU</span> 
+                <span class="txt1">日本网页画廊，更新较快</span>
+              </dd>
+              <dd>
+                <span class="tit1">Pinterest</span> 
+                <span class="txt1">全世界人都在帮你找灵感</span>
+              </dd>
+            </dl>
+        </li> 
+        <li class="list">灵感酷站
+          <div class="line"></div>
+          <ol class="part2">
+              <li>
+                <span class="tit">WEB</span> 
+                <ul class="part2-01">
+                  <li>
+                    <span class="tit1">Awwwards</span> 
+                    <span class="txt1">欧美网页设计欣赏</span>
+                  </li>
+                  <li>
+                    <span class="tit1">4db</span> 
+                    <span class="txt1">日本网页设计欣赏</span>
+                  </li>
+                  <li>
+                    <span class="tit1">One page lo</span> 
+                    <span class="txt1">单页网页设计欣赏</span>
+                  </li>
+                  <li>
+                    <span class="tit1">Mobile pattern</span> 
+                    <span class="txt1">移动网页设计欣赏</span>
+                  </li>
+                </ul>
+              </li>
+              <div class="line"></div>
+              <li>
+                <span class="tit">移动APP UI</span> 
+                <ul class="part2-01">
+                  <li>
+                    <span class="tit1">Pttrns</span> 
+                    <span class="txt1">收集移动APP界面设计作品</span>
+                  </li>
+                  <li>
+                    <span class="tit1">UIgarage</span> 
+                    <span class="txt1">优秀UI碎片整理</span>
+                  </li>
+                  <li>
+                    <span class="tit1">app-icons</span> 
+                    <span class="txt1">APP图标集合</span>
+                  </li>
+                  <li>
+                    <span class="tit1">Love UI</span> 
+                    <span class="txt1">分享移动端APP设计作品</span>
+                  </li>
+                </ul>
+              </li>
+              <div class="line"></div>
+              <li>
+                <span class="tit">动效设计</span>
+                <dl class="part1">
+                  <dd>
+                    <span class="tit1">UI Movement</span> 
+                    <span class="txt1">移动APP动效界面，更新快</span>
+                  </dd>
+                  <dd>
+                    <span class="tit1">Motions</span> 
+                    <span class="txt1">好玩的GIF动画作品</span>
+                  </dd>
+                  <dd>
+                    <span class="tit1">SIX UX</span> 
+                    <span class="txt1">分享6秒内的交互设计作品</span>
+                  </dd>
+                  <dd>
+                    <span class="tit1">NavNav</span> 
+                    <span class="txt1">收集优秀Web&APP菜单</span>
+                  </dd>
+                </dl>
+              </li>
+              <div class="line"></div>
+              <li>
+                <span class="tit">综合推荐</span> 
+                <dl class="part1">
+                  <dd>
+                    <span class="tit1">abcduzeedo</span> 
+                    <span class="txt1">每天创意作品分享</span>
+                  </dd>
+                  <dd>
+                    <span class="tit1">Logopand</span> 
+                    <span class="txt1">Logo设计灵感来源</span>
+                  </dd>
+                  <dd>
+                    <span class="tit1">inspirationde</span> 
+                    <span class="txt1">类似花瓣、Pinterest，作品量少，质量高</span>
+                  </dd>
+                  <dd>
+                    <span class="tit1">deviantART</span> 
+                    <span class="txt1">艺术家与设计师展示作品的平台</span>
+                  </dd>
+                </dl>
+              </li>
+            </ol>
+        </li>
+      </ul>
+
+</body>
+</html>
