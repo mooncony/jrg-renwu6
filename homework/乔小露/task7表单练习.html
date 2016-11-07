@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>表单练习</title>
+  <style type="text/css">
+    *{margin:0 auto;padding: 0; font-size:16px;}
+	.main{
+      width:500px;
+      padding:30px;
+      background:#fff;
+      box-shadow:0 1px 20px rgba(168,189,181,0.8)
+      border-radius:4px;
+      -webkit-border-radius:4px;
+      -moz-border-radius:4px;
+    }
+    .tit{
+      color:#444;
+    }
+    .text{
+      outline:none;
+      width:240px;
+      font-size:14px;
+      line-height:18px;
+      margin-bottom:10px;
+      padding:8px 0;
+      text-indent:8px;
+      border-radius:4px;
+      -webkit-border-radius:4px;
+      -moz-border-radius:4px;
+      border: 1px solid #e3ecea;
+      background:#f1f8f6;
+    }
+    .text:hover{
+      border:1px solid #5ec2a2;
+    }
+    .text:focus{
+      border:1px solid #008b5f;
+    }
+    .sex+label{
+      position:relative;
+      display:inline-block;
+      width:40px;
+      line-height:26px;
+      padding:4px 4px 4px 30px;
+      cursor:pointer;
+    }
+    .sex+label:before{
+      content:"";
+      display:block;
+      width:16px;
+      height:16px;
+      background:#eee;
+      border-radius:10px;
+      position:absolute;
+      top:9px;
+      left:9px;
+      border:1px #cdcecf solid;
+      box-shadow: 0px 0px 3px #dee0e3;
+    }
+    .sex:checked+label:before{
+      content:"";
+      background:#008b5f;
+    }
+    .sex:checked+label:after{
+      content:"";
+      position:absolute;
+      width:6px;
+      height:6px;
+      border-radius:6px;
+      display:block;
+      background:#fff;
+      top:15px;
+      left:15px; 
+      box-shadow:0 1px 2px #b2b8be;
+    }
+    
+    .hobby+label{
+      position:relative;
+      display:inline-block;
+      width:40px;
+      line-height:26px;
+      padding:4px 4px 4px 30px;
+      cursor:pointer;
+    }
+    .hobby+label:before{
+      content:"";
+      display:block;
+      width:16px;
+      height:16px;
+      background:#eee;
+      border-radius:2px;
+      position:absolute;
+      top:9px;
+      left:9px;
+      border:1px #cdcecf solid;
+      box-shadow: 0px 0px 3px #dee0e3;
+    }
+    .hobby:checked+label:before{
+      content:"";
+      background:#008b5f;
+    }
+    .hobby:checked+label:after{    
+      content:"";  
+      position:absolute;  
+      width:8px;  
+      height:4px; 
+      top:13px;  
+      left:13px;  
+      border:2px solid #fff; 
+      box-shadow:0 1px 2px #b2b8be;
+      border-top:none;  
+      border-right:none;  
+      background:transparent;   
+      transform:rotate(-45deg);  
+      -webkit-transform:rotate(-45deg);  
+      -moz-transform:rotate(-45deg);  
+      -o-transform:rotate(-45deg);  
+      -ms-transform:rotate(-45deg);  
+    }  
+    .text2{
+      display:inline-block;
+      outline:none;
+      width:400px;
+      font-size:14px;
+      line-height:1.5em;
+      padding:8px 15px;
+      border-radius:4px;
+      -webkit-border-radius:4px;
+      -moz-border-radius:4px;
+      border: 1px solid #e3ecea;
+      background:#f1f8f6;
+      text-indent:1.5em;
+    } 
+    .tit1{
+      color:#444;
+      display:inline-block;
+    }
+    .text2:focus{
+      border:1px solid #008b5f;
+    }
+    select{
+      outline:none;
+      width:120px;
+      height:26px;
+      line-height:26px;
+      padding-left:6px;
+      background:#f1f8f6;
+      border:1px solid #008b5f;
+      color:#1f2523;
+      cursor:pointer;
+    }
+    select:focus{
+      outline:none;
+      border:1px solid #008b5f; 
+      box-shadow:0 0 3px #008b5f;
+    }
+    select option{
+      background:#f1f8f6;
+    }
+    .btn{
+      outline:none;
+      width:60px;
+      height:26px;
+      line-height:26px;
+      border:1px solid #008b5f;
+      background:#008b5f;
+      color:#fff;
+      font-size:14px;
+      cursor:pointer;
+    }
+    .btn:hover{
+     background:#00744f; 
+    }
+  </style>
+  </head>
+  <body>
+    <form class="main" name="myform" method="post" action="#">
+      <span class="tit">姓名:</span>&nbsp;&nbsp;
+      <input class="text" name="username" type="text" placeholder="用户名" minlength="6">
+      <br>
+      <span class="tit">密码:</span>&nbsp;&nbsp;
+      <input class="text" name="password" type="password" placeholder="输入密码" maxlength="16" minlength="8">
+      <br>
+      <span class="tit">性别:</span>
+      <input class="sex" name="sex" type="radio" id="check-1" hidden>
+      <label for="check-1">男</label>
+      <input class="sex" name="sex" type="radio" id="check-2" hidden>
+      <label class="tit" for="check-2">女</label>
+      <br>
+      <span class="tit">取向:</span>
+      <input class="sex" name="sex" type="radio" id="check-3" hidden>
+      <label for="check-3">男</label>
+      <input class="sex" name="sex" type="radio" id="check-4" hidden>
+      <label for="check-4">女</label>
+      <br>
+      <span class="tit">爱好:</span>
+      <input class="hobby" name="hobby" type="checkbox" id="check-5" hidden>
+      <label for="check-5">dota</label>
+      <input class="hobby" name="hobby" type="checkbox" id="check-6" hidden>
+      <label for="check-6">宠物</label>
+      <input class="hobby" name="hobby" type="checkbox" id="check-7" hidden>
+      <label for="check-7">旅游</label>
+      <br><br>
+      <span class="tit1">评论:</span>
+      <textarea class="text2" rows="8" cols="50">
+我是一个多行文本输入框。我是一个多行文本输入框。我是一个多行文本输入框。我是一个多行文本输入框。我是一个多行文本输入框。我是一个多行文本输入框。我是一个多行文本输入框。我是一个多行文本输入框。我是一个多行文本输入框。
+      </textarea>
+      <br><br>
+      <span class="tit1">水果:</span>
+      <select name="fruit">
+        <option value="apple" style="width:220px;height:46px;">apple</option>
+        <option value="cherry">cherry</option>
+        <option value="orange">orange</option>
+        <option value="lemon" selected>lemon</option>
+        <option value="strawberry">strawberry</option>
+      </select>
+      <input type="submit" class="btn" value="提交">
+    </form>
+	
+</body>
+</html>
